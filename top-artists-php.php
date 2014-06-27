@@ -13,7 +13,9 @@
 			$id = 1;
 			foreach ($data['topartists']['artist'] as $band){
 	    		echo $id++.". Band: <img src='".$band['image'][3]['#text']."'/>". $band['name'] . ". Played ". $band['playcount'] ." times.<br>";
-				if (++$i == $top) break;
+				if (($id-1) == $top){
+					break;
+				}
 			};
 		}
 
